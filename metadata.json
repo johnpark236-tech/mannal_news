@@ -1,0 +1,6 @@
+{
+  "name": "만날신문 - MANNAL DAILY",
+  "description": "대한민국 온라인 종합일간지 만날신문 공식 홈페이지. 테크/IT, 경제/투자, 사회/환경 중심의 깊이 있는 뉴스와 평생 구독 혜택을 제공합니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
