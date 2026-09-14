@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -18,8 +18,42 @@ import { PolicyPage } from './pages/PolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { CategorySlug } from './types/news';
 
+// Admin
+import { AdminLoginPage } from './pages/AdminLoginPage';
+import { AdminWritePage } from './pages/AdminWritePage';
+import { AdminArticlesPage } from './pages/AdminArticlesPage';
+import { AdminLayout } from './components/AdminLayout';
+import { isAdminLoggedIn } from './lib/adminAuth';
+
+const AdminApp: React.FC = () => {
+  const { currentPath, navigate } = useApp();
+  const [loggedIn, setLoggedIn] = useState(isAdminLoggedIn());
+
+  if (!loggedIn) {
+    return <AdminLoginPage onSuccess={() => setLoggedIn(true)} />;
+  }
+
+  const editId = currentPath.includes('?id=')
+    ? currentPath.split('?id=')[1]
+    : undefined;
+
+  return (
+    <AdminLayout currentPath={currentPath} navigate={navigate}>
+      {currentPath.startsWith('/admin/write')
+        ? <AdminWritePage editId={editId} navigate={navigate} />
+        : <AdminArticlesPage navigate={navigate} />
+      }
+    </AdminLayout>
+  );
+};
+
 const AppContent: React.FC = () => {
   const { currentPath } = useApp();
+
+  // Admin 라우트 처리
+  if (currentPath.startsWith('/admin')) {
+    return <AdminApp />;
+  }
 
   // Scroll to top on page change
   useEffect(() => {
