@@ -46,14 +46,18 @@
       gap:14px;
     }
     .progress-box{
-      flex:0 0 auto;
+      position:fixed;
+      top:12px;
+      right:max(12px, env(safe-area-inset-right));
+      z-index:9999;
       min-width:138px;
-      background:rgba(255,255,255,.16);
-      border:2px solid rgba(255,255,255,.32);
+      background:rgba(15,76,129,.96);
+      border:2px solid rgba(255,255,255,.42);
       border-radius:16px;
       padding:12px 14px;
       text-align:center;
-      backdrop-filter:blur(4px);
+      backdrop-filter:blur(8px);
+      box-shadow:0 8px 24px rgba(0,0,0,.24);
     }
     .progress-count{
       font-size:26px;
@@ -202,7 +206,12 @@
       .hero-row{align-items:center}
       .hero h1{font-size:25px}
       .hero p{font-size:18px}
-      .progress-box{min-width:118px;padding:10px 8px}
+      .progress-box{
+        top:max(8px, env(safe-area-inset-top));
+        right:max(8px, env(safe-area-inset-right));
+        min-width:118px;
+        padding:10px 8px;
+      }
       .progress-count{font-size:23px}
       .progress-percent{font-size:16px}
       h2{font-size:24px}
