@@ -1,7 +1,7 @@
 const ADMIN_KEY = 'mannal_admin_auth';
 
 export function adminLogin(password: string): boolean {
-  const correct = import.meta.env.VITE_ADMIN_PASSWORD || 'mannal2026';
+  const correct = (import.meta.env.VITE_ADMIN_PASSWORD || 'mannal2026').trim();
   if (password === correct) {
     sessionStorage.setItem(ADMIN_KEY, 'true');
     return true;
