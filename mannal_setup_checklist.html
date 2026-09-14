@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>만날신문 + 부설 평생교육원 설립 실행표</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --line:#dbe3ef;
+      --accent:#0f4c81;
+      --accent2:#eaf3fb;
+      --warn:#fff3cd;
+      --ok:#e9f7ef;
+      --tax:#f4ecff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+      font-size:20px;
+    }
+    .wrap{
+      width:min(760px, 100%);
+      margin:0 auto;
+      padding:18px 14px 40px;
+    }
+    .hero{
+      background:linear-gradient(135deg,#0f4c81,#1f6aa5);
+      color:white;
+      padding:24px 20px;
+      border-radius:20px;
+      margin-bottom:18px;
+      box-shadow:0 8px 24px rgba(15,76,129,.18);
+    }
+    .hero-row{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .progress-box{
+      flex:0 0 auto;
+      min-width:138px;
+      background:rgba(255,255,255,.16);
+      border:2px solid rgba(255,255,255,.32);
+      border-radius:16px;
+      padding:12px 14px;
+      text-align:center;
+      backdrop-filter:blur(4px);
+    }
+    .progress-count{
+      font-size:26px;
+      font-weight:900;
+      line-height:1.15;
+    }
+    .progress-percent{
+      margin-top:4px;
+      font-size:18px;
+      font-weight:800;
+    }
+    .hero h1{
+      margin:0 0 8px;
+      font-size:30px;
+      line-height:1.3;
+      letter-spacing:-0.02em;
+    }
+    .hero p{
+      margin:0;
+      font-size:19px;
+      opacity:.96;
+    }
+    .summary{
+      background:#fff;
+      border:2px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      margin-bottom:18px;
+    }
+    .summary strong{
+      display:block;
+      font-size:22px;
+      margin-bottom:8px;
+    }
+    .flow{
+      font-size:19px;
+      font-weight:700;
+      color:var(--accent);
+    }
+    .card{
+      background:var(--card);
+      border:2px solid var(--line);
+      border-radius:18px;
+      padding:20px 18px;
+      margin:0 0 16px;
+      box-shadow:0 4px 14px rgba(17,24,39,.05);
+    }
+    .card.newspaper{border-left:8px solid #2563eb}
+    .card.education{border-left:8px solid #16a34a}
+    .card.tax{border-left:8px solid #7c3aed}
+    .card.operation{border-left:8px solid #d97706}
+    .top{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .check-wrap{
+      margin-left:auto;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:18px;
+      font-weight:800;
+    }
+    .done-check{
+      width:28px;
+      height:28px;
+      accent-color:#16a34a;
+      cursor:pointer;
+    }
+    .card.completed{
+      opacity:.72;
+      background:#f0fdf4;
+    }
+    .card.completed h2{
+      text-decoration:line-through;
+      text-decoration-thickness:2px;
+    }
+    .num{
+      min-width:52px;
+      height:52px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      background:var(--accent);
+      font-weight:800;
+      font-size:24px;
+    }
+    .kind{
+      font-size:18px;
+      font-weight:800;
+      padding:5px 10px;
+      border-radius:999px;
+      background:var(--accent2);
+      color:var(--accent);
+    }
+    h2{
+      margin:0 0 14px;
+      font-size:25px;
+      line-height:1.35;
+      letter-spacing:-0.02em;
+    }
+    .row{
+      padding:11px 0;
+      border-top:1px solid var(--line);
+    }
+    .row:first-of-type{border-top:0}
+    .label{
+      display:block;
+      color:var(--muted);
+      font-size:17px;
+      font-weight:800;
+      margin-bottom:3px;
+    }
+    .value{
+      display:block;
+      font-size:20px;
+      font-weight:600;
+    }
+    .important{
+      background:var(--warn);
+      border-radius:12px;
+      padding:12px 14px;
+      margin-top:12px;
+      font-size:19px;
+      font-weight:800;
+    }
+    .done{
+      background:var(--ok);
+    }
+    .footer{
+      margin-top:22px;
+      background:#111827;
+      color:white;
+      border-radius:18px;
+      padding:20px;
+      font-size:18px;
+    }
+    @media (max-width:480px){
+      body{font-size:21px}
+      .wrap{padding:12px 10px 28px}
+      .hero{padding:20px 16px}
+      .hero-row{align-items:center}
+      .hero h1{font-size:25px}
+      .hero p{font-size:18px}
+      .progress-box{min-width:118px;padding:10px 8px}
+      .progress-count{font-size:23px}
+      .progress-percent{font-size:16px}
+      h2{font-size:24px}
+      .value{font-size:21px}
+      .label{font-size:17px}
+      .card{padding:18px 16px}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-row">
+      <div>
+        <h1>만날신문 + 부설 평생교육원<br>설립 실행표</h1>
+        <p>스마트폰 세로 스크롤용 · 큰 글씨 버전</p>
+      </div>
+      <div class="progress-box" aria-live="polite">
+        <div class="progress-count" id="progressCount">0/28</div>
+        <div class="progress-percent" id="progressPercent">0% 완료</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary">
+    <strong>전체 진행 순서</strong>
+    <div class="flow">
+      만날신문 등록 → 사업자등록 → 부설 평생교육원 신고 → 사업자 업종 추가/면세 확인 → 운영 준비
+    </div>
+  </section>
+
+  <div id="cards"></div>
+
+  <section class="footer">
+    <strong>핵심 주의사항</strong><br><br>
+    ① 신문 등록증을 먼저 받아야 부설 평생교육원 신고가 가능합니다.<br>
+    ② 교육원 신고 전 건축물 용도, 전문인력, 평생교육사 요건을 먼저 확인하세요.<br>
+    ③ 교육서비스업이라고 해서 자동으로 면세가 되는 것은 아니므로 세무서 확인이 필요합니다.
+  </section>
+</div>
+
+<script>
+const items = [
+["①","신문","제호 중복확인","정기간행물 등록관리 시스템 / 관할 시·도 확인","충청남도","무료","당일","✅ 완료 상태","done"],
+["②","신문","도메인·신문 홈페이지 구축","자체 제작","충청남도 심사 시 확인","도메인·호스팅 실비","완료","✅ 기사·발행인·편집인·연락처 등 실제 신문 형태 권장","done"],
+["③","신문","발행인 기본증명서(상세)","전자가족관계등록시스템 / 주민센터","충청남도","온라인 무료 등","당일","등록신청 직전 발급 권장",""],
+["④","신문","편집인 기본증명서(상세)","전자가족관계등록시스템 / 주민센터","충청남도","온라인 무료 등","당일","발행인과 동일인이어도 해당사항 확인",""],
+["⑤","신문","임대차계약서 사본","임대인·임차인","충청남도","별도 수수료 없음","보유 즉시","개인/단체가 발행소를 임차한 경우 제출",""],
+["⑥","신문","신문사업·인터넷신문사업 등록신청서","법정서식 직접 작성","충청남도","수수료 없음","작성 1일","제호·종별·발행인·편집인·발행소 등 정확히 기재",""],
+["⑦","신문","법인일 경우 정관 / 단체일 경우 규약·설립증빙","자체 / 법인","충청남도","실비","1일","개인사업 형태면 해당 없는 서류 제외",""],
+["⑧","신문","인터넷신문 등록 접수","위 ③~⑦ 일괄","충청남도","무료","법정 총 20일","★ 평생교육원보다 반드시 먼저 완료",""],
+["⑨","신문","신문사업·인터넷신문 등록증","충청남도 발급","교육지원청 제출용","무료","⑧ 완료 후","★ 평생교육원 설치주체 자격을 입증하는 핵심서류",""],
+["⑩","세무","사업자등록 신청서 + 신문 등록증 + 임대차계약서 등","홈택스 / 세무서","관할 세무서","무료","통상 1~3일","사업자등록증 상호·업종 정리",""],
+["⑪","교육원","건축물대장","정부24 / 세움터","교육지원청","온라인 무료","당일","★ 계약·시설공사 전 교육시설 사용 가능 여부 확인",""],
+["⑫","교육원","전문인력 확보 증빙","근로계약서·재직증명 등","교육지원청","인건비 별도","사전 확보","현행 시행령상 프로그램 운영 전담 전문인력 1명 이상 요건 확인",""],
+["⑬","교육원","평생교육사 자격증 사본","국가평생교육진흥원 / 보유 자격증","교육지원청","무료","즉시","평생교육사 배치자료",""],
+["⑭","교육원","평생교육시설 신고서","법정서식 작성","관할 교육지원청","수수료 없음","1일","언론기관부설 유형으로 신고",""],
+["⑮","교육원","운영규칙","직접 작성","교육지원청","무료","1~2일","명칭·목적·위치·교육과정·정원·수료·교육기간·학습비 등",""],
+["⑯","교육원","교육과정 편성표·학습비 내역","직접 작성","교육지원청","무료","1일","AI·한국어·디지털교육 등 실제 운영과정 확정",""],
+["⑰","교육원","위치도","지도자료 활용 작성","교육지원청","무료","당일","시설 위치 표시",""],
+["⑱","교육원","시설배치도 / 평면도","직접 / 건축도면","교육지원청","직접작성 무료","1일","강의실·사무실·출입구·면적 등을 명확히 표시",""],
+["⑲","교육원","시설·설비 현황표","직접 작성","교육지원청","무료","1일","책상·의자·PC·교육장비 등",""],
+["⑳","교육원","재산목록 및 증빙","직접 작성 / 통장·구입자료 등","교육지원청","무료","1일","교육원 운영 재산 확인",""],
+["㉑","교육원","교육장 임대차계약서 사본","임대인·임차인","교육지원청","별도 수수료 없음","즉시","임차시설인 경우",""],
+["㉒","교육원","언론기관 등록증 사본","⑨ 발급본","교육지원청","무료","즉시","★ 만날신문이 적법한 언론기관임을 증명",""],
+["㉓","교육원","결격사유·범죄전력 관련 동의서 등","교육지원청 양식","교육지원청","무료","당일","담당청 요구양식 사용",""],
+["㉔","교육원","전체 신고서류 접수","⑫~㉓ 묶음","교육지원청","수수료 없음","법정 총 10일","서류보완·시설확인이 있을 수 있음",""],
+["㉕","교육원","평생교육시설 신고증 수령","교육지원청","교육지원청","무료","㉔ 완료","★ 정식 「만날신문 부설 평생교육원」 운영 근거",""],
+["㉖","세무","사업자등록 정정 / 업종 추가","홈택스 / 관할 세무서","국세청","무료","1~3일","교육서비스업 추가",""],
+["㉗","세무","부가가치세 면세 적용 확인","신고증·교육과정 자료","관할 세무서","무료","당일~수일","교육용역의 실제 면세대상 여부 확인 후 처리",""],
+["㉘","운영","개인정보처리방침·환불규정·수강신청서·출석부·영수증 체계","자체 작성","내부관리","무료","운영 전","수강생 모집 전에 준비",""]
+];
+
+function cls(kind){
+  if(kind==="신문") return "newspaper";
+  if(kind==="교육원") return "education";
+  if(kind==="세무") return "tax";
+  return "operation";
+}
+const box = document.getElementById("cards");
+items.forEach((x, idx)=>{
+  const [num,kind,title,source,agency,cost,duration,note,extra] = x;
+  const el = document.createElement("section");
+  el.className = "card "+cls(kind);
+  el.innerHTML = `
+    <div class="top">
+      <div class="num">${num}</div>
+      <div class="kind">${kind}</div>
+      <label class="check-wrap">
+        <input class="done-check" type="checkbox" data-index="${idx}" aria-label="${title} 완료">
+        완료
+      </label>
+    </div>
+    <h2>${title}</h2>
+    <div class="row"><span class="label">발급·작성처</span><span class="value">${source}</span></div>
+    <div class="row"><span class="label">제출·담당기관</span><span class="value">${agency}</span></div>
+    <div class="row"><span class="label">비용</span><span class="value">${cost}</span></div>
+    <div class="row"><span class="label">예상기간</span><span class="value">${duration}</span></div>
+    <div class="important ${extra}">${note}</div>
+  `;
+  box.appendChild(el);
+});
+
+const STORAGE_KEY = "mannal_setup_progress_v1";
+
+function loadProgress(){
+  try{
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    document.querySelectorAll(".done-check").forEach((cb, idx)=>{
+      cb.checked = saved.includes(idx);
+      cb.closest(".card").classList.toggle("completed", cb.checked);
+    });
+  }catch(e){}
+  updateProgress();
+}
+
+function saveProgress(){
+  const done = [...document.querySelectorAll(".done-check")]
+    .filter(cb => cb.checked)
+    .map(cb => Number(cb.dataset.index));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(done));
+  updateProgress();
+}
+
+function updateProgress(){
+  const all = [...document.querySelectorAll(".done-check")];
+  const completed = all.filter(cb => cb.checked).length;
+  const total = all.length;
+  const percent = total ? Math.round((completed / total) * 100) : 0;
+  document.getElementById("progressCount").textContent = `${completed}/${total}`;
+  document.getElementById("progressPercent").textContent = `${percent}% 완료`;
+  all.forEach(cb => cb.closest(".card").classList.toggle("completed", cb.checked));
+}
+
+document.addEventListener("change", e=>{
+  if(e.target.classList.contains("done-check")) saveProgress();
+});
+
+loadProgress();
+</script>
+</body>
+</html>
