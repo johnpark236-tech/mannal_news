@@ -18,6 +18,10 @@ import { PolicyPage } from './pages/PolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { CategorySlug } from './types/news';
 
+// Beta
+import { BetaBanner } from './components/BetaBanner';
+import { BetaPopup } from './components/BetaPopup';
+
 // Admin
 import { AdminLoginPage } from './pages/AdminLoginPage';
 import { AdminWritePage } from './pages/AdminWritePage';
@@ -125,6 +129,10 @@ const AppContent: React.FC = () => {
       >
         본문 바로가기 (Skip to content)
       </a>
+
+      {/* Beta notice */}
+      <BetaBanner />
+      <BetaPopup />
 
       {/* Global Newspaper Header */}
       <Header />
