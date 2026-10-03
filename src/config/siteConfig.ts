@@ -19,6 +19,12 @@ export const siteConfig: SiteConfig = {
   disclaimer: '기사 내용의 무단 전재 및 재배포를 금합니다. 본 웹사이트의 모든 기사는 데모 시연용 샘플 콘텐츠입니다.',
   categories: [
     {
+      slug: 'ai',
+      label: 'AI',
+      description: '새로운 AI 모델과 기능 업데이트를 빠르게 분석하고 바로 활용할 수 있는 실전 교안을 제공합니다.',
+      badgeColor: '#7C3AED',
+    },
+    {
       slug: 'tech',
       label: '테크/IT',
       description: '인공지능, 반도체, 미래 교육, 스마트 제조 등 산업 혁신의 최전선',
