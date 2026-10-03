@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase, DbArticle } from '../lib/supabase';
 
 const CATEGORIES = [
+  { value: 'ai', label: 'AI' },
   { value: 'tech', label: '테크/IT' },
   { value: 'economy', label: '경제/투자' },
   { value: 'society', label: '사회/환경' },
@@ -20,8 +21,8 @@ export const AdminWritePage: React.FC<Props> = ({ editId, navigate }) => {
     title: '',
     summary: '',
     content: '',
-    category: 'tech',
-    author: '',
+    category: 'ai',
+    author: 'AI 기자 전하리',
     image_url: '',
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
@@ -90,7 +91,7 @@ export const AdminWritePage: React.FC<Props> = ({ editId, navigate }) => {
       }
       setMessage(status === 'published' ? '✅ 발행되었습니다!' : '✅ 임시저장되었습니다.');
       if (!editId) {
-        setForm({ title: '', summary: '', content: '', category: 'tech', author: '', image_url: '' });
+        setForm({ title: '', summary: '', content: '', category: 'ai', author: 'AI 기자 전하리', image_url: '' });
         setImagePreview('');
         setImageFile(null);
       }
