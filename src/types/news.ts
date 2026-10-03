@@ -1,4 +1,5 @@
 export type CategorySlug = 
+  | 'ai' 
   | 'tech' 
   | 'economy' 
   | 'society' 
