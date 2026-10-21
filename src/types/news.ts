@@ -37,6 +37,10 @@ export interface ArticleContentSection {
 }
 
 export interface Article {
+  sourceUrl?: string;
+  sourceTitle?: string;
+  sourcePublishedAt?: string;
+  isAiGenerated?: boolean;
   id: string;
   slug: string;
   category: CategorySlug;

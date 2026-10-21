@@ -268,12 +268,19 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ articleId }) => {
             <h3 className="text-xs font-bold text-[#D81B60] uppercase tracking-wider mb-2">
               만날 3줄 핵심 요약
             </h3>
-            <p className="text-sm font-medium text-[#4B4F58] leading-relaxed">
+            <p className="text-sm font-medium text-[#4B4F58] leading-relaxed whitespace-pre-line">
               {article.summary}
             </p>
           </div>
 
           {/* Formatted Sections */}
+          {article.isAiGenerated && (
+            <aside className="my-6 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-relaxed">
+              <p>이 기사는 공식 발표 자료를 바탕으로 AI 기자 전하리가 자동 작성했습니다. 활용·수업 내용은 교육용 제안입니다.</p>
+              {article.sourceUrl && <a href={article.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">공식 원문: {article.sourceTitle}</a>}
+              {article.sourcePublishedAt && <p>원문 발표: {new Date(article.sourcePublishedAt).toLocaleString('ko-KR', {timeZone: 'Asia/Seoul'})} (한국 시간)</p>}
+            </aside>
+          )}
           {article.content.map((sec, idx) => (
             <section key={idx} className="space-y-4">
               {sec.heading && (

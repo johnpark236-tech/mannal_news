@@ -1,0 +1,57 @@
+name: AI reporter - every 30 minutes
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ai-reporter
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Research and write one new article
+        run: python scripts/ai_reporter.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - name: Build the newspaper
+        run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_ADMIN_PASSWORD: ${{ secrets.VITE_ADMIN_PASSWORD }}
+      - name: Save article and image
+        id: save
+        run: |
+          git add public/data/ai-news.json public/images/
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'Mannal AI Reporter'
+          git config user.email 'ai-reporter@users.noreply.github.com'
+          git commit -m 'news: publish official-source AI lesson article'
+          git push origin HEAD:main
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+      - name: Prepare Pages
+        if: steps.save.outputs.changed == 'true'
+        run: |
+          cp CNAME dist/CNAME
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
+      - uses: peaceiris/actions-gh-pages@v3
+        if: steps.save.outputs.changed == 'true'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true

@@ -99,7 +99,25 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   };
 
   const [currentPath, setCurrentPath] = useState<string>(getInitialPath);
-  const [articles] = useState<Article[]>(sampleArticles);
+  const [articles, setArticles] = useState<Article[]>(sampleArticles);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const refresh = async () => {
+      try {
+        const response = await fetch(`/data/ai-news.json?t=${Date.now()}`, { signal: controller.signal, cache: 'no-store' });
+        if (!response.ok) return;
+        const news: Article[] = await response.json();
+        if (!Array.isArray(news)) return;
+        const valid = news.filter(a => a && typeof a.id === 'string' && a.category === 'ai' && typeof a.title === 'string' && Array.isArray(a.content));
+        const ids = new Set(valid.map(a => a.id));
+        setArticles([...valid, ...sampleArticles.filter(a => !ids.has(a.id))]);
+      } catch (error) { if (!controller.signal.aborted) console.warn('AI news refresh unavailable'); }
+    };
+    void refresh();
+    const timer = window.setInterval(refresh, 5 * 60 * 1000);
+    return () => { controller.abort(); window.clearInterval(timer); };
+  }, []);
 
   // Read / write hash on route change
   const navigate = (path: string) => {
