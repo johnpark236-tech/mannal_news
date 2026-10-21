@@ -5,7 +5,7 @@ import { Clock, ArrowRight, Bookmark, Flame } from 'lucide-react';
 export const HeroNewsDesk: React.FC = () => {
   const { articles, navigate, isBookmarked, toggleBookmark } = useApp();
 
-  const top1 = articles.find(a => a.id === 'art-001') || articles[0];
+  const top1 = articles.find(a => a.id === 'ai-20261021-mannal-intro') || articles[0];
   const top2 = articles.find(a => a.id === 'art-002') || articles[1];
   const top3 = articles.find(a => a.id === 'art-003') || articles[2];
 
@@ -52,9 +52,7 @@ export const HeroNewsDesk: React.FC = () => {
                 <Flame className="w-3.5 h-3.5 text-[#D81B60]" />
                 TOP 1 · {top1.categoryLabel}
               </span>
-              <span className="bg-white/90 backdrop-blur-xs text-[#111318] text-[11px] font-semibold px-2.5 py-1 rounded-md border border-black/10">
-                데모 기사
-              </span>
+              {top1.isDemo && <span className="bg-white/90 backdrop-blur-xs text-[#111318] text-[11px] font-semibold px-2.5 py-1 rounded-md border border-black/10">데모 기사</span>}
             </div>
 
             {/* Bookmark button on image */}
