@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
+import { trackNewsView } from '../lib/analytics';
 import { ArticleCard } from '../components/ArticleCard';
 import {
   ChevronRight,
@@ -38,6 +39,10 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ articleId }) => {
   } = useApp();
 
   const article = getArticleById(articleId) || articles[0];
+
+  useEffect(() => {
+    if (article?.id) trackNewsView(article.id, article.title);
+  }, [article?.id]);
 
   // Font size multiplier: 1 = 100%, 1.15 = 115%, 1.3 = 130%
   const [fontScale, setFontScale] = useState<number>(1);
