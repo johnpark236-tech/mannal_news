@@ -32,7 +32,7 @@ jobs:
           assert "workflow_dispatch" in on
           assert obj["permissions"]["actions"]=="write"
           assert "CODEX_AUTH_JSON" in s and "secrets.CODEX_AUTH_JSON" in s
-          assert "actions/cache" not in s and "auth.json" not in s.split("Save")[0] if False else True
+          assert "actions/cache" not in s
           assert "gh workflow run deploy.yml" in s
           print("News hourly YAML valid: schedule, auth secret, post-push explicit deployment.")
           PY
