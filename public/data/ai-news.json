@@ -1,5 +1,97 @@
 [
   {
+    "id": "ai-auto-20261024-library-ai-literacy",
+    "slug": "ai-auto-20261024-library-ai-literacy",
+    "category": "ai",
+    "categoryLabel": "AI",
+    "title": "[초급] 동네 도서관에서 배우는 AI… Microsoft·미국 공공도서관협회 교육 확대",
+    "subtitle": "10월 22일 발표… 무료 AI 교육과 실무자 지원 추진, 도구 사용법 넘어 판단력 강조",
+    "summary": "Microsoft는 미국 공공도서관협회와 도서관 직원·이용자를 위한 무료 AI 교육 확대 계획을 발표했다.\n교육은 도구 사용법뿐 아니라 개인정보 보호와 AI 주장·출처를 평가하는 판단력도 다룬다.\n시민 수업에서는 AI에 맡길 일과 사람이 검토할 일을 구분하는 작은 활동으로 연결할 수 있다.",
+    "content": [
+      {
+        "heading": "공식 발표에서 확인한 내용",
+        "paragraphs": [
+          "Microsoft는 2026년 10월 22일 미국도서관협회 산하 공공도서관협회(PLA)와 도서관 직원 및 이용자를 위한 무료 AI 리터러시·기술 교육을 확대하는 계획을 발표했다. 이 기사는 한국시간 10월 24일 작성했다.",
+          "‘Building AI Skills and Agency Through Libraries’라는 이름의 계획은 실무 자료와 교육, 직원 간 학습 공동체, 무료 웨비나와 안내를 제공하는 방향이다. 발표는 AI 이해와 활용뿐 아니라 개인정보·기밀정보 보호, AI 주장과 출처의 비판적 평가, 안전과 편향에 관한 이해도 다룬다고 설명한다.",
+          "이는 미국 공공도서관을 중심으로 한 발표다. 한국 도서관의 참여나 한국어 강좌 개설이 확인됐다는 뜻은 아니며, 국내 독자의 즉시 신청 가능 여부를 보장하지 않는다. 새 소비자 AI 기능 출시 소식과도 구분해야 한다."
+        ]
+      },
+      {
+        "heading": "누가 참고하면 좋은가 — 기자의 해설",
+        "paragraphs": [
+          "시민 AI 강사와 도서관·평생학습 담당자는 생활 가까운 학습 공간에서 AI 교육을 제공하는 사례로 참고할 수 있다. 일반 직장인과 AI 초보자는 ‘명령을 잘 쓰는 법’과 함께 ‘어떤 일을 맡겨도 되는지 판단하는 법’을 배울 필요가 있다는 관점으로 읽을 수 있다.",
+          "다음 수업은 기자가 독립적으로 구성한 제안이다. Microsoft나 PLA가 제공한 공식 교육안이나 수료·인증 과정이 아니다. 유료 서비스 가입 없이 종이 활동으로 진행할 수 있다."
+        ]
+      },
+      {
+        "heading": "20분 수업 제안 — 내 일의 AI 사용 기준 세우기",
+        "paragraphs": [
+          "대상은 시민·직장인·AI 초보자이며, 목표는 세 가지 가상 업무를 분류하고 각 업무의 사람 검토 지점을 설명하는 것이다. 준비물은 종이와 필기도구, 아래 가상 업무 카드다.",
+          "도입 3분: ‘AI가 빨리 해 주면 좋겠는 일 하나’를 말하게 한다. 강사는 결과가 누구에게 영향을 주는지도 함께 묻는다.",
+          "설명 7분: 세 칸을 만든다. ‘공개 자료로 초안 만들기’, ‘자료·권한 확인 후 검토하기’, ‘사람이 직접 결정하기’다. 같은 업무도 입력 자료와 사용 목적에 따라 분류가 달라질 수 있음을 설명한다.",
+          "실습 7분: 가상 카드 A는 공개된 행사 소개문을 세 문장으로 줄이기, B는 이름·연락처가 든 참가자 목록으로 안내문 준비하기, C는 학습자의 최종 평가 결정하기다. 각 카드의 분류와 이유, 사람이 확인할 부분을 적는다. AI를 쓸 수 있는 경우에는 실제 명단 없이 아래 프롬프트를 이용한다.",
+          "정리 3분: 각자 카드 하나를 골라 ‘AI가 도울 부분’과 ‘사람에게 남길 부분’을 설명한다. 강사는 분류 정답 하나를 강요하기보다 자료 취급과 결과의 영향을 근거로 판단했는지 확인한다."
+        ]
+      },
+      {
+        "heading": "복사 가능한 실습 프롬프트 — 기자의 제안",
+        "paragraphs": [
+          "다음은 실제 사람이나 행사와 무관한 가상 업무다. A: 공개 행사 소개문을 짧게 요약하기. B: 이름과 연락처가 든 참가자 목록을 사용해 안내문 준비하기. C: 학습자의 최종 평가를 결정하기. 각 업무를 ‘AI가 도울 부분 / 사전에 확인할 자료·권한 / 사람이 검토하거나 결정할 부분’의 세 열로 정리해줘. 실제 개인정보를 요구하지 말고, 모르는 기관 정책은 ‘확인 필요’로 표시해줘. AI가 최종 결정을 대신한다고 가정하지 마. 외부 발송이나 실제 자료 업로드는 수행하지 마.",
+          "활동 예시: A는 원문과 요약을 대조하고, B는 실명 없이도 안내문 초안을 만들 수 있는지부터 살핀다. C는 평가 기준과 최종 판단을 교사에게 남긴다. 이는 수업용 예시이며 기관의 실제 업무 규정을 대체하지 않는다."
+        ]
+      },
+      {
+        "heading": "사용 조건과 주의점",
+        "paragraphs": [
+          "공식 발표의 무료 교육은 모든 AI 제품의 무료·무제한 사용을 뜻하지 않는다. 한국어 제공, 국내 신청 경로, 개별 강좌 일정과 수료 조건은 이 기사에서 확인되지 않았으므로 확정하지 않는다.",
+          "기자의 운영 제안: 시민 수업에서는 계정이 없는 사람도 참여할 수 있게 종이 활동을 준비한다. 실습 자료는 공개·가상 자료로 만들고, 실제 명단·상담 기록 등은 입력하지 않는다. 교육 자료를 고를 때는 발표일과 적용 지역을 함께 확인한다."
+        ]
+      },
+      {
+        "heading": "강사 마무리 멘트",
+        "paragraphs": [
+          "“오늘은 AI에게 일을 더 많이 시키는 연습보다 내 기준을 세우는 연습을 했습니다. AI가 도울 부분을 고르고, 확인할 자료와 사람의 판단을 함께 남겨 보세요. 그 기준이 있으면 도구가 바뀌어도 배움을 이어갈 수 있습니다.”"
+        ]
+      },
+      {
+        "heading": "공식 출처",
+        "paragraphs": [
+          "https://blogs.microsoft.com/on-the-issues/2026/10/22/expanding-ai-literacy-with-the-american-library-association-and-community-based-programs/ — Expanding AI literacy with the Public Library Association and community-based programs. 원문 표시 발표일 2026-10-22이며 정확한 게시 시각은 표시되지 않았다. 기사 작성일과 발표일은 구분했다."
+        ]
+      }
+    ],
+    "author": {
+      "name": "AI 기자 전하리",
+      "role": "AI 전문기자",
+      "department": "AI·디지털혁신부",
+      "email": "ai@mannaldaily.kr",
+      "avatar": "/images/ai-reporter.svg",
+      "bio": "공식 발표를 확인해 AI가 자동 작성한 교안형 기사입니다. 사실 보도와 기자가 구성한 교육 제안을 구분해 제공합니다."
+    },
+    "publishedAt": "2026-10-24 05:01",
+    "updatedAt": "2026-10-24 05:01",
+    "image": "/images/ai-auto-20261024-library-ai-literacy.svg",
+    "imageAlt": "미국 도서관 AI 교육 확대의 핵심과 AI 도움·자료 확인·사람 판단의 세 학습 관점을 설명하는 그래픽",
+    "imageCaption": "만날신문 편집 그래픽 · 실제 제품 화면 아님. 미국 교육 확대 발표와 기자의 시민 수업 제안을 표현했다.",
+    "tags": [
+      "Microsoft",
+      "공공도서관",
+      "AI교육",
+      "AI리터러시",
+      "시민교육",
+      "AI교안"
+    ],
+    "views": 0,
+    "isBreaking": false,
+    "isFeatured": true,
+    "isDemo": false,
+    "readTimeMinutes": 5,
+    "sourceUrl": "https://blogs.microsoft.com/on-the-issues/2026/10/22/expanding-ai-literacy-with-the-american-library-association-and-community-based-programs/",
+    "sourceTitle": "Expanding AI literacy with the Public Library Association and community-based programs",
+    "sourcePublishedAt": "2026-10-22",
+    "isAiGenerated": true
+  },
+  {
     "id": "ai-auto-20261024-cohere-confidential",
     "slug": "ai-auto-20261024-cohere-confidential",
     "category": "ai",
