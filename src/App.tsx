@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { trackNewsDownload } from './lib/analytics';
 import { SubscriptionModal } from './components/SubscriptionModal';
 import { Toast } from './components/Toast';
 
@@ -153,6 +154,17 @@ const AppContent: React.FC = () => {
 };
 
 export function App() {
+  useEffect(() => {
+    const onDownloadClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const a = target.closest('a[download],a[href$=".pdf"],a[href$=".pptx"],a[href$=".zip"]') as HTMLAnchorElement | null;
+      if (a?.href) trackNewsDownload(a.href);
+    };
+    document.addEventListener('click', onDownloadClick);
+    return () => document.removeEventListener('click', onDownloadClick);
+  }, []);
+
   return (
     <AppProvider>
       <AppContent />
