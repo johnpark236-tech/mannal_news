@@ -213,7 +213,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ articleId }) => {
             {article.categoryLabel} 기획 심층
           </span>
 
-          <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl font-black text-[#111318] leading-tight tracking-tight">
+          <h1 style={{ wordBreak: 'keep-all', overflowWrap: 'anywhere', textWrap: 'balance' }} className="font-serif text-2xl sm:text-4xl md:text-5xl font-black text-[#111318] leading-tight tracking-tight">
             {article.title}
           </h1>
 
