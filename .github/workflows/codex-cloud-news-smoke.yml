@@ -33,6 +33,7 @@ jobs:
           assert obj["permissions"]["actions"]=="write"
           assert "CODEX_AUTH_JSON" in s and "secrets.CODEX_AUTH_JSON" in s
           assert "actions/cache" not in s
-          assert "gh workflow run deploy.yml" in s
+          assert "cloud_ops.py deploy --kind news --repo work" in s
+          assert "Always report actual publishing outcome" in s
           print("News hourly YAML valid: schedule, auth secret, post-push explicit deployment.")
           PY
