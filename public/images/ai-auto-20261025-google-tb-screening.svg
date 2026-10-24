@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">의료 AI 발표, 세 단계로 읽기</title><desc id="desc">Google Research의 결핵 선별검사 관련 발표를 현장 적용, 모델 활용, 협력 연구로 구분한 교육용 도식</desc>
+<rect width="1600" height="900" fill="#0d2037"/>
+<g font-family="sans-serif" fill="#fff">
+<text x="90" y="100" font-size="28" fill="#70ddd4">GOOGLE RESEARCH · 2026.10.23 발표</text>
+<text x="90" y="185" font-size="58" font-weight="700">의료 AI 발표, 단계를 구분해 읽기</text>
+<text x="90" y="250" font-size="30" fill="#c5d5e5">결핵 선별검사 관련 현장 사례와 연구를 살펴봅니다</text>
+<rect x="90" y="325" width="440" height="320" rx="24" fill="#193954"/>
+<rect x="580" y="325" width="440" height="320" rx="24" fill="#193954"/>
+<rect x="1070" y="325" width="440" height="320" rx="24" fill="#193954"/>
+<g font-size="32" font-weight="700" fill="#70ddd4"><text x="125" y="390">01 현장 적용</text><text x="615" y="390">02 모델 활용</text><text x="1105" y="390">03 협력 연구</text></g>
+<g font-size="34"><text x="125" y="470">Nexus AI</text><text x="615" y="470">MedGemma</text><text x="615" y="520">MedSigLIP</text><text x="1105" y="470">HeAR</text></g>
+<g font-size="27" fill="#c5d5e5"><text x="125" y="565">흉부 엑스선 분석 사례</text><text x="615" y="585">인도네시아 활용 소개</text><text x="1105" y="565">기침 소리 관련 연구</text></g>
+<text x="90" y="725" font-size="31">수업 질문: 누가 · 무엇을 · 어느 단계까지 했을까?</text>
+<text x="90" y="780" font-size="26" fill="#c5d5e5">발표 분석 활동입니다. 의료 판단이나 제품 실행 실습은 포함하지 않습니다.</text>
+<text x="90" y="850" font-size="25" fill="#a9bed3">만날신문 편집 그래픽 · 실제 제품 화면 아님</text>
+</g></svg>
