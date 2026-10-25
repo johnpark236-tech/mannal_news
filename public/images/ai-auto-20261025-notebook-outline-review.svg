@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Gemini Notebook 개요 검토</title><desc id="desc">자료에서 개요를 만들고 수정 의견을 모아 최종 생성하는 흐름. 이용 조건은 계정별 확인 필요.</desc>
+<rect width="1600" height="900" fill="#101c32"/>
+<g font-family="sans-serif" fill="#ffffff">
+<text x="100" y="125" font-size="28" fill="#8fdcca">만날신문 AI 수업</text>
+<text x="100" y="210" font-size="56" font-weight="bold">완성 전에, 개요부터 살펴보세요</text>
+<text x="100" y="275" font-size="30" fill="#ccd6e6">Gemini Notebook · 슬라이드와 영상 구성안 검토</text>
+<g fill="#223653"><rect x="100" y="355" width="420" height="250" rx="24"/><rect x="590" y="355" width="420" height="250" rx="24"/><rect x="1080" y="355" width="420" height="250" rx="24"/></g>
+<g font-size="36" font-weight="bold"><text x="140" y="425">01 자료 읽기</text><text x="630" y="425">02 개요 검토</text><text x="1120" y="425">03 최종 생성</text></g>
+<g font-size="28" fill="#d1dbea"><text x="140" y="490">주제와 근거 정리</text><text x="140" y="545">없는 사실 넣지 않기</text><text x="630" y="490">순서와 누락 확인</text><text x="630" y="545">수정 의견 모으기</text><text x="1120" y="490">검토 후 진행</text><text x="1120" y="545">결과도 원자료 대조</text></g>
+<path d="M535 480h40m-12-12 12 12-12 12M1025 480h40m-12-12 12 12-12 12" fill="none" stroke="#8fdcca" stroke-width="5"/>
+<text x="100" y="700" font-size="30" fill="#ffd995">이용 조건 안내에 차이 있음 · 계정별 확인 필요</text>
+<text x="100" y="755" font-size="28" fill="#ccd6e6">수업 활동: 공식 발표 읽기 + 종이 개요 비교</text>
+<text x="100" y="835" font-size="26" fill="#a9b8cd">만날신문 편집 그래픽 · 실제 제품 화면 아님</text>
+</g></svg>
