@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Agent Skills 표준의 AAIF 기증</title><desc id="desc">공통 규격의 운영 변화와 업무 설명서 작성 활동을 표현한 편집 그래픽</desc>
+<rect width="1600" height="900" fill="#101e32"/>
+<g font-family="sans-serif" fill="#ffffff">
+<text x="100" y="115" font-size="28" fill="#7dd3fc">만날신문 · AI 수업</text>
+<text x="100" y="200" font-size="56" font-weight="700">AI에게 건네는 업무 설명서</text>
+<text x="100" y="265" font-size="30">Agent Skills 표준 → AAIF 기증 발표</text>
+<rect x="100" y="330" width="1400" height="365" rx="24" fill="#20334d"/>
+<text x="150" y="395" font-size="32" fill="#7dd3fc">종이로 설계하는 네 가지 기준</text>
+<text x="160" y="485" font-size="36">01 목표</text><text x="820" y="485" font-size="36">02 입력 자료</text>
+<text x="160" y="595" font-size="36">03 처리 순서</text><text x="820" y="595" font-size="36">04 출력 형식</text>
+<text x="100" y="760" font-size="28">표준 운영 변화와 제품별 이용 조건은 따로 확인하세요.</text>
+<text x="100" y="840" font-size="26" fill="#cbd5e1">만날신문 편집 그래픽 · 실제 제품 화면 아님</text>
+</g></svg>
