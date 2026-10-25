@@ -1,16 +1,11 @@
 name: Publishing operations dashboard
 on:
-  schedule:
-    - cron: "17,37,57 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - ".github/workflows/publishing-dashboard.yml"
       - "automation/codex/dashboard.py"
-  workflow_run:
-    workflows: ["Cloud Codex CLI - hourly AI news"]
-    types: [completed]
 concurrency:
   group: publishing-dashboard-recovery
   cancel-in-progress: false
@@ -31,7 +26,7 @@ jobs:
       - name: Summarize runs, publication outcomes and observed schedule gaps
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python automation/codex/dashboard.py --kind news --repo ${{ github.repository }} --recover
+        run: python automation/codex/dashboard.py --kind news --repo ${{ github.repository }}
       - uses: actions/upload-artifact@v4
         with:
           name: publishing-dashboard-${{ github.run_id }}-${{ github.run_attempt }}
