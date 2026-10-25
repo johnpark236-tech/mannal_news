@@ -1,0 +1,59 @@
+name: Stop news automation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/stop-news-automation.yml"]
+permissions:
+  contents: read
+  actions: write
+jobs:
+  stop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Disable news publisher and recovery, cancel unfinished news runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, time
+          repo=os.environ['TARGET_REPO']
+          def api(path, method='GET'):
+              out=subprocess.check_output(['gh','api','--method',method,path],text=True)
+              return json.loads(out) if out.strip() else None
+          paths={'.github/workflows/codex-cloud-hourly-news.yml','.github/workflows/publishing-dashboard.yml'}
+          workflows=api(f'repos/{repo}/actions/workflows?per_page=100')['workflows']
+          targets=[x for x in workflows if x['path'] in paths]
+          if {x['path'] for x in targets} != paths:
+              raise SystemExit('Missing target workflow; refusing to claim full stop')
+          ids={x['id'] for x in targets}
+          for w in targets:
+              api(f"repos/{repo}/actions/workflows/{w['id']}/disable",'PUT')
+          runs=api(f'repos/{repo}/actions/runs?per_page=100')['workflow_runs']
+          cancelled=[]
+          for r in runs:
+              if r['workflow_id'] in ids and r['status']!='completed':
+                  try:
+                      api(f"repos/{repo}/actions/runs/{r['id']}/cancel",'POST')
+                      cancelled.append(r['id'])
+                  except subprocess.CalledProcessError:
+                      if api(f"repos/{repo}/actions/runs/{r['id']}")['status']!='completed':
+                          raise
+          for run_id in cancelled:
+              for attempt in range(12):
+                  state=api(f'repos/{repo}/actions/runs/{run_id}')
+                  if state['status']=='completed':break
+                  time.sleep(2)
+              else:raise SystemExit('Cancellation still pending')
+          rows=[]
+          for w in targets:
+              state=api(f"repos/{repo}/actions/workflows/{w['id']}")
+              if state['state']!='disabled_manually':raise SystemExit('Workflow not disabled')
+              rows.append('| '+w['path']+' | disabled_manually |')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write('# 뉴스 자동 작성 중지 확인\n\n| 경로 | 상태 |\n|---|---|\n'+'\n'.join(rows)+'\n\n미완료 실행 취소: '+str(cancelled)+'\n\nAI 교안 예약은 변경하지 않았습니다.\n')
+          print('NEWS_AUTOMATION_DISABLED; cancelled runs:',cancelled)
+          PY
