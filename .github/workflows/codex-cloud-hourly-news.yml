@@ -1,8 +1,6 @@
 name: Cloud Codex CLI - hourly AI news
 
 on:
-  schedule:
-    - cron: "5 * * * *" # UTC; minute is also 05 in Asia/Seoul. Jobs may start late.
   workflow_dispatch:
 
 permissions:
@@ -15,7 +13,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    if: ${{ false }} # User requested permanent pause of news writing
     runs-on: ubuntu-latest
     timeout-minutes: 75
     steps:
