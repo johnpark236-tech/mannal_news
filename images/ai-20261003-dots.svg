@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#173d72"/></linearGradient><linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#60a5fa"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-opacity=".28"/></filter></defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1320" cy="120" r="260" fill="#2563eb" opacity=".12"/><circle cx="220" cy="760" r="300" fill="#14b8a6" opacity=".10"/>
+<text x="110" y="130" fill="#9bdcff" font-family="Arial,sans-serif" font-size="34" font-weight="700">AI AGENT · ALWAYS-ON WORKFLOW</text>
+<text x="110" y="210" fill="white" font-family="Arial,sans-serif" font-size="72" font-weight="800">Dots</text>
+<text x="110" y="270" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="31">24시간 이어서 일하는 AI 동료의 업무 구조</text>
+<g filter="url(#s)">
+<rect x="130" y="365" width="280" height="180" rx="30" fill="#10284c" stroke="#4f8edc" stroke-width="3"/>
+<text x="270" y="435" text-anchor="middle" fill="#a7f3d0" font-family="Arial,sans-serif" font-size="28" font-weight="700">사용자 목표</text><text x="270" y="485" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="24">지시 · 기준 · 승인</text>
+<rect x="660" y="315" width="320" height="280" rx="48" fill="url(#glow)"/>
+<circle cx="820" cy="410" r="60" fill="#07152f"/><circle cx="800" cy="400" r="8" fill="#5eead4"/><circle cx="840" cy="400" r="8" fill="#5eead4"/><path d="M790 435 Q820 458 850 435" fill="none" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/>
+<text x="820" y="520" text-anchor="middle" fill="#07152f" font-family="Arial,sans-serif" font-size="34" font-weight="800">상시형 AI 에이전트</text>
+<rect x="1190" y="365" width="280" height="180" rx="30" fill="#10284c" stroke="#4f8edc" stroke-width="3"/>
+<text x="1330" y="435" text-anchor="middle" fill="#a7f3d0" font-family="Arial,sans-serif" font-size="28" font-weight="700">연결된 업무</text><text x="1330" y="485" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="24">앱 · 브라우저 · 클라우드</text>
+</g>
+<path d="M420 455 C500 455 555 455 640 455" stroke="#60a5fa" stroke-width="8" fill="none"/><polygon points="640,455 612,438 612,472" fill="#60a5fa"/>
+<path d="M990 455 C1070 455 1120 455 1180 455" stroke="#60a5fa" stroke-width="8" fill="none"/><polygon points="1180,455 1152,438 1152,472" fill="#60a5fa"/>
+<g font-family="Arial,sans-serif" text-anchor="middle"><rect x="330" y="690" width="240" height="92" rx="24" fill="#0f294d"/><text x="450" y="747" fill="white" font-size="25">지속 실행</text><rect x="680" y="690" width="240" height="92" rx="24" fill="#0f294d"/><text x="800" y="747" fill="white" font-size="25">도구 연결</text><rect x="1030" y="690" width="240" height="92" rx="24" fill="#0f294d"/><text x="1150" y="747" fill="white" font-size="25">사용자 승인</text></g>
+<text x="1490" y="850" text-anchor="end" fill="#94a3b8" font-family="Arial,sans-serif" font-size="22">MANNAL NEWS · AI</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Eleven Realtime Translation 발표 읽기</title><desc id="desc">다른 언어 사이의 음성 번역 개념과 기업용 알파 조건, 도입 확인 항목</desc>
+<rect width="1600" height="900" fill="#101d32"/>
+<g font-family="sans-serif" fill="#ffffff">
+<text x="90" y="110" font-size="28" fill="#8ce5ce">AI NEWS CLASS · 2026.10.21 공식 발표</text>
+<text x="90" y="190" font-size="54" font-weight="bold">대화 중, 다른 언어로 듣기</text>
+<text x="90" y="250" font-size="32">Eleven Realtime Translation</text>
+<rect x="90" y="325" width="420" height="200" rx="24" fill="#24435c"/>
+<rect x="590" y="325" width="420" height="200" rx="24" fill="#205f62"/>
+<rect x="1090" y="325" width="420" height="200" rx="24" fill="#24435c"/>
+<text x="130" y="395" font-size="30">말하는 사람</text><text x="130" y="460" font-size="36">자신의 언어</text>
+<path d="M525 425h50m-15-15 15 15-15 15M1025 425h50m-15-15 15 15-15 15" stroke="#8ce5ce" stroke-width="5" fill="none"/>
+<text x="630" y="395" font-size="30">실시간 음성 번역</text><text x="630" y="460" font-size="30">선택한 목소리로 출력</text>
+<text x="1130" y="395" font-size="30">듣는 사람</text><text x="1130" y="460" font-size="36">번역된 언어</text>
+<text x="90" y="610" font-size="34" fill="#8ce5ce">공개 단계: 기업용 ElevenAPI 고객 대상 알파</text>
+<text x="90" y="675" font-size="30">확인할 조건: 가격 · 한국 제공 · 계정 접근 자격</text>
+<text x="90" y="735" font-size="28">수업 활동: 발표 읽기 → 기능과 조건 구분 → 검토표 작성</text>
+<text x="90" y="835" font-size="25" fill="#c1cbd9">만날신문 편집 그래픽 · 실제 제품 화면 아님</text>
+</g></svg>

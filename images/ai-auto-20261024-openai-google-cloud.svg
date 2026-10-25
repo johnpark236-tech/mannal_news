@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">OpenAI와 Google Cloud의 기업 AI 도입 경로</title><desc id="desc">모델과 Codex를 Model Garden으로 연결하는 계획. 정식 제공 예정과 비용 및 권한 확인을 안내한다.</desc>
+<rect width="1200" height="675" fill="#101c36"/><g font-family="Arial, Noto Sans KR, sans-serif">
+<text x="64" y="68" fill="#83d8eb" font-size="22" letter-spacing="2">MANNAL DAILY / AI EXPLAINED</text>
+<text x="64" y="132" fill="#fff" font-size="40" font-weight="700">OpenAI × Google Cloud</text>
+<text x="64" y="179" fill="#d8e3f4" font-size="27">기업 AI, 도입 경로가 넓어진다</text>
+<rect x="64" y="231" width="308" height="182" rx="22" fill="#1e3659"/>
+<text x="94" y="277" fill="#83d8eb" font-size="22">모델 · 업무 흐름</text>
+<text x="94" y="326" fill="#fff" font-size="29" font-weight="700">OpenAI 모델</text>
+<text x="94" y="370" fill="#fff" font-size="27">Codex</text>
+<path d="M390 320 H435 M424 309 L437 320 L424 331" stroke="#83d8eb" stroke-width="5" fill="none"/>
+<rect x="456" y="231" width="308" height="182" rx="22" fill="#17494c"/>
+<text x="486" y="277" fill="#8ee4c1" font-size="22">이용 플랫폼</text>
+<text x="486" y="326" fill="#fff" font-size="28" font-weight="700">Google Cloud</text>
+<text x="486" y="370" fill="#fff" font-size="26">Model Garden</text>
+<path d="M780 320 H823 M812 309 L825 320 L812 331" stroke="#83d8eb" stroke-width="5" fill="none"/>
+<rect x="844" y="231" width="292" height="182" rx="22" fill="#3b3158"/>
+<text x="874" y="277" fill="#e0bffa" font-size="22">구매 창구</text>
+<text x="874" y="326" fill="#fff" font-size="28" font-weight="700">Cloud</text>
+<text x="874" y="370" fill="#fff" font-size="27">Marketplace</text>
+<rect x="64" y="447" width="1072" height="113" rx="18" fill="#24334c"/>
+<text x="89" y="489" fill="#ffdb97" font-size="25" font-weight="700">정식 제공 예정 · 발표만으로 즉시 사용을 뜻하지 않음</text>
+<text x="89" y="531" fill="#e0e9f5" font-size="22">도입 전 확인: 사용 가능 여부 / 자료 접근 권한 / 비용 조건</text>
+<text x="64" y="606" fill="#b8c8df" font-size="20">발표 2026.10.21 · 출처 OpenAI 공식 공지</text>
+<text x="64" y="641" fill="#b8c8df" font-size="19">만날신문 편집 그래픽 · 실제 제품 화면 아님</text>
+</g></svg>

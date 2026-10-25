@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Gemini 대화 기록의 범위 정하기</title><desc id="desc">대상, 기간, 시간대를 정한 뒤 내보낸 기록을 검토하는 흐름. 실제 화면이 아닌 편집 그래픽.</desc>
+<rect width="1600" height="900" fill="#102339"/>
+<g font-family="sans-serif" fill="#ffffff">
+<text x="100" y="125" font-size="30" fill="#78d9cc">GOOGLE VAULT · GEMINI IN WORKSPACE</text>
+<text x="100" y="215" font-size="58" font-weight="bold">AI 대화, 필요한 범위를 정하세요</text>
+<text x="100" y="280" font-size="29" fill="#c8d7e7">관리 기능 이해하기 · 실습은 가상 목록으로</text>
+<rect x="100" y="355" width="420" height="260" rx="24" fill="#24435d"/>
+<rect x="590" y="355" width="420" height="260" rx="24" fill="#24435d"/>
+<rect x="1080" y="355" width="420" height="260" rx="24" fill="#24435d"/>
+<g font-size="39" font-weight="bold"><text x="140" y="425">01 대상</text><text x="630" y="425">02 기간</text><text x="1120" y="425">03 검토</text></g>
+<g font-size="29" fill="#d8e7ef"><text x="140" y="495">어느 계정·조직인가?</text><text x="140" y="550">필요한 범위만 지정</text><text x="630" y="495">언제부터 언제까지?</text><text x="630" y="550">시간대도 함께 확인</text><text x="1120" y="495">질문·답변·첨부물</text><text x="1120" y="550">참조 링크까지 점검</text></g>
+<text x="100" y="710" font-size="30" fill="#78d9cc">수업 목표: 가상 기록에서 조건에 맞는 항목과 제외 이유 찾기</text>
+<text x="100" y="820" font-size="27" fill="#c8d7e7">만날신문 편집 그래픽 · 실제 제품 화면 아님</text>
+</g></svg>
