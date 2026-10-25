@@ -28,12 +28,13 @@ jobs:
           s=p.read_text(encoding="utf-8")
           obj=yaml.safe_load(s)
           on=obj.get("on") or obj.get(True)
-          assert on["schedule"][0]["cron"]=="5 * * * *"
+          assert "schedule" not in on
+          assert "false" in str(obj["jobs"]["publish"]["if"]).lower()
           assert "workflow_dispatch" in on
           assert obj["permissions"]["actions"]=="write"
           assert "CODEX_AUTH_JSON" in s and "secrets.CODEX_AUTH_JSON" in s
           assert "actions/cache" not in s
           assert "cloud_ops.py deploy --kind news --repo work" in s
           assert "Always report actual publishing outcome" in s
-          print("News hourly YAML valid: schedule, auth secret, post-push explicit deployment.")
+          print("News automation paused: no schedule and publisher job disabled.")
           PY
